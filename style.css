@@ -5287,8 +5287,20 @@
  
  [data-theme="dark"] .cart-form .quantity-button-handler {
      border: transparent;
-     background-color: #332858;
+     background-color: #505169;
      color: #ffffff;
+ }
+ 
+ [data-theme="dark"] .single-settings .title i {
+     background-color: #ffaf00;
+ }
+ 
+ [data-theme="dark"] .text-dark {
+     color: #ffaf00 !important;
+ }
+ 
+ [data-theme="dark"] .notification-area .list-group-item span {
+     color: #bfbfbf !important;
  }
  
  [data-theme="dark"] .flash-sale-panel {
@@ -5491,4 +5503,14 @@
  .btn-footer {
      background-color: #000;
      border-radius: 5px;
+ }
+ 
+ .user-profile {
+     width: 80px;
+     height: 80px;
+ }
+ 
+ .border-avii {
+     border-radius: 5px;
+     border: 1px solid #100DD1;
  }
