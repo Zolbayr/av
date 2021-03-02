@@ -49,7 +49,7 @@
 
     // :: Add To Cart Notify
     $(".add2cart-notify").on("click", function() {
-        $("body").append("<div class='add2cart-notification animated fadeIn'>Added to cart successfully!</div>");
+        $("body").append("<div class='add2cart-notification animated fadeIn'>Амжилттай хадгаллаа!</div>");
         $(".add2cart-notification").delay(2000).fadeOut();
     });
 
@@ -217,3 +217,21 @@
     }
 
 })();
+
+(function() {
+    'use strict'
+
+    var forms = document.querySelectorAll('.needs-validation')
+
+    Array.prototype.slice.call(forms)
+        .forEach(function(form) {
+            form.addEventListener('submit', function(event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+        })
+})()

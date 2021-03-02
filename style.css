@@ -317,8 +317,8 @@
  .btn-warning:hover,
  .btn-warning:focus {
      color: #ffffff;
-     background-color: #020310;
-     border-color: #020310;
+     background-color: #ffaf00;
+     border-color: #ffaf00;
  }
  
  .btn-danger {
@@ -4326,9 +4326,13 @@
      -webkit-transition-duration: 500ms;
      transition-duration: 500ms;
      border-color: #ebebeb;
-     height: 40px;
      padding: 0.375rem 1rem;
      font-size: 14px;
+ }
+ 
+ .form-select {
+     font-weight: 500;
+     color: #000;
  }
  
  .form-control:focus {
@@ -4384,6 +4388,24 @@
      border-radius: 50%;
      background-color: transparent;
      text-align: center;
+ }
+ 
+ a.post-bookmark.add2cart-notify.active {
+     position: absolute;
+     z-index: 100;
+     color: #fff;
+     top: .5rem;
+     right: .5rem;
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     background-color: transparent;
+     text-align: center;
+     background: #ff0018;
+ }
+ 
+ a.post-bookmark.add2cart-notify.active i {
+     color: #fff;
  }
  
  .blog-card .post-bookmark i {
