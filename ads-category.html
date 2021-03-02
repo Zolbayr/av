@@ -107,10 +107,12 @@
 
                 <nav class="page-breadcrumb container pt-4 pl-0 pb-4">
                     <a href="#" class="h5 avii-color"><i class="far fa-user avii-color mr-2"></i>Хэрэглэгчийн хэсэг</a>
-
                     <span class="delimiter">
                         <i class="lni lni-arrow-right mr-1 ml-1"></i>
-                        </span><span class="text-dark h5">Зар нэмэх</span>
+                        </span><a href="#" class="h5 avii-color">Зар нэмэх</a>
+                    <span class="delimiter">
+                        <i class="lni lni-arrow-right mr-1 ml-1"></i>
+                        </span><span class="text-dark h5">Зар оруулах</span>
 
                 </nav>
 
@@ -119,26 +121,55 @@
 
 
                 <div class=" product-catagory-wrap mt-3">
-                    <div class="row g-3 ">
-                        <div class="col-12 col-md-4">
-                            <div class="card catagory-card ">
-                                <div class="card-body "><a href="# "><i class="lni lni-investment"></i><span>Зар оруулах</span></a></div>
-                            </div>
-                        </div>
-                        <!-- Single Catagory Card-->
-                        <div class="col-12 col-md-4">
-                            <div class="card catagory-card">
-                                <div class="card-body "><a href="# "><i class="lni lni-shopify "></i><span>Дэлгүүр зар нэмэх</span></a></div>
-                            </div>
-                        </div>
-                        <!-- Single Catagory Card-->
-                        <div class="col-12 col-md-4">
-                            <div class="card catagory-card ">
-                                <div class="card-body ">
-                                    <a href="# "><i class="lni lni-service"></i><span>Хоол зар нэмэх</span></a>
+                    <div class="row g-3">
+
+
+                        <form class="row g-3 needs-validation" novalidate>
+                            <div class="col-md-4">
+                                <label class="form-label">Үндсэн ангилалаа сонгон уу!</label>
+                                <select class="form-select" required>
+                                    <option selected disabled value="">Сонгон уу...</option>
+                                    <option value="0">Үл хөдлөх</option>
+                                    <option value="1">Автомашин</option>
+                                    <option value="2">Ажлын зар</option>
+                                    <option value="3">Гар утас</option>
+                                  </select>
+                                <div class="valid-feedback">
+                                    амжилттай
                                 </div>
                             </div>
-                        </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Төрөл сонгон уу!</label>
+                                <select class="form-select" required>
+                                    <option selected disabled value="">Сонгон уу...</option>
+                                    <option value="0">Зарах</option>
+                                    <option value="1">Түрээслэх</option>
+                                     
+                                  </select>
+                                <div class="valid-feedback">
+                                    амжилттай
+                                </div>
+                            </div>
+
+
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                    <label class="form-check-label" for="invalidCheck">
+                                  Би зөвшөөрч байна.
+                                </label>
+                                    <div class="invalid-feedback">
+                                        Та үнэн зөв мэдээлэл оруулсан үгийг зөвшөөрөх товч дарна уу!!!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary" type="submit">Submit form</button>
+                            </div>
+                        </form>
+
+
+
 
 
                     </div>
@@ -211,6 +242,27 @@
     <script src="js/default/no-internet.js "></script>
     <script src="js/default/active.js "></script>
     <script src="js/pwa.js "></script>
+    <script>
+        (function() {
+            'use strict'
+
+
+            var forms = document.querySelectorAll('.needs-validation')
+
+
+            Array.prototype.slice.call(forms)
+                .forEach(function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
 </body>
 
 </html>

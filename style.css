@@ -4793,6 +4793,10 @@
      color: #fff !important;
  }
  
+ [data-theme="dark"] .form-label {
+     color: #fff !important;
+ }
+ 
  [data-theme="dark"] .page-breadcrumb i {
      color: #fff !important;
  }
@@ -5513,4 +5517,9 @@
  .border-avii {
      border-radius: 5px;
      border: 1px solid #100DD1;
+ }
+ 
+ select.form-select {
+     font-weight: 500;
+     color: #000;
  }
